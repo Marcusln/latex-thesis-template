@@ -1,0 +1,70 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+% START SKRIV HER
+
+\chapter{Conclusion}
+
+It is possible to predict stockout. Machine learning is better than logistic regression / heuristics. The best way to implement the model is by running it proactively (weekly), then initiating transshipments if stockout is predicted (reactive). 
+
++ future work: predict more than one period ie not myopic
+
+## Notes
+* Inventory pooling: https://www.hbs.edu/faculty/Lists/Events/Attachments/163/Pooling.pdf
+* Stockout prediction: https://arxiv.org/pdf/1709.06922.pdf
+    * See references for inspiration of supply chain theory etc
+* Optimize precision for slow and recall for fast ASINs? Nice discussion
+
+* 2019, Retail supply chain management: a review of theories and practices : https://www.researchgate.net/publication/334550360_Retail_supply_chain_management_a_review_of_theories_and_practices
+
+* Shipping speed increasingly important, competitive advantage.
+* Tremendous increase in demand for online retail, which could be more sustainable than driving to the store.
+* Very few players have achieved reasonably priced 1-day shipping.
+
+* aggregated forecasts more accurate
+
+Supply chain is a highly volatile environment which changes constantly, and where a small change makes a huge difference (bullwhip effect). The high demand variability makes it hard to forecast, which is evident from the saying "all forecasts are wrong". This illustrates the importance of having a flexible supply chain that can adapt to an every-changing customer demand.
+
+Naturally, a high selection makes physical warehouse space a scarce commodity. 
+
+For online retail, the purchase order decision is based on a forecast. However, as demand changes, this might lead to being overstocked or understocked. Retailers adds a buffer inventory, safety stock, in order to combat this problem. Another way is to leverage inventory pooling, where critical low inventory in one warehouse can be replineshed, either completely or partially, from another warehouse in the same echelon. Another benfit of using this approach is that the inventory decision is deferred from the purchase order to a time closer to the customer purchase.
+
+As demand eventually deviates from the forecast, different regions in the market will either be understocked or understocked, creating imbalances in the supply chain network. One way to mitigate these imbalances is to use lateral transshipments. Lateral transshipments is when an overstocked FC can replenish the understocked FC. This effectively illustrates how inventory pooling can rebalance the network and mitigate the risk of inaccurate forecasts.
+
+The consequence of a stockout is lost sales opportunity. Buying more inventory is a process that takes time, depending on the wholesaler's lead time, and lateral transshipments are a better fit to combat demand fluctuations.
+
+- Agile supply chain
+
+Agile supply chain: https://www.sciencedirect.com/science/article/abs/pii/S0019850199001108
+
+Stern School of Business: http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/margin.html
+
+
+https://pdfs.semanticscholar.org/0243/d7560941f72c5b7b6592aa34ef8d8c6247f2.pdf :
+
+- Uncertainty
+- Three effects: deterministic chaos, parallel interactions, demand amplification (bullwhip effect)
+
+Supply chains compete, not companies (Christopher, 1992).
+
+87\% of online shoppers identified shipping speed as a key factor in the decision to shop with an e-commerce brand again.: https://www.mhlnews.com/transportation-distribution/article/22051729/delivery-time-top-priority-for-online-shoppers
+
+Supply chain management is a highly complex field, characterized by uncertainty. 
+
+This guy has interesting papers: https://scholar.google.com/citations?user=rtjA2vQAAAAJ&hl=en
+
+McKinsey 2020: https://www.mckinsey.com/~/media/McKinsey/Industries/Retail/Our%20Insights/Adapting%20to%20the%20next%20normal%20in%20retail%20The%20customer%20experience%20imperative/Adapting-to-the-next-normal-in-retail-the-customer-experience-imperative-v3.pdf
+
+MIT Technology Review, 2013: https://www.technologyreview.com/2013/11/04/175533/its-all-e-commerce-now/
+
+HBR 2011: https://hbr.org/2011/12/the-future-of-shopping
+
+MIT 2018: https://webcache.googleusercontent.com/search?q=cache:P9lHXptd8ggJ:https://sloanreview.mit.edu/article/beyond-the-speed-price-trade-off/+&cd=1&hl=en&ct=clnk&gl=lu
+
+Christopher, M. (1992). "Logistics and Supply Chain Management: Strategies for
+reducing costs and improving services.". Financial Times/Pitman Publishing.
+
+The inventory placement problem (also some on lateral transshipments): https://dspace.mit.edu/handle/1721.1/111854
+
+
+% SLUTT SKRIV HER
+\end{document}

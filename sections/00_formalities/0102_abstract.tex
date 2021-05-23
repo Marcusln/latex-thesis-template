@@ -8,7 +8,7 @@
 As online customers increasingly demand one- and same-day shipping, the inventory location is imperative; laws of physics requires inventory to be close to the customers. In a supply chain network of multiple warehouses that covers a large geographical area of customers, a warehouse may face stock-out while another warehouse has excess inventory.
 
 \textbf{What is the problem?}\\
-A stock-out in a warehouse will increase the distance to the customers located around this warehouse.
+A stock-out in a warehouse will increase the distance of the inventory to the customers located around this warehouse.
 
 \textbf{Why is it important?}\\
 In order to deliver within a day or less, inventory needs to be close to the customer.
@@ -23,6 +23,8 @@ There is no literature on using machine learning in a lateral transshipment poli
 
 \textbf{What is the result?}\\
 Using a snapshot of the supply chain, a machine learning classifier predicts whether a warehouse will face stock-out in the next week. If yes, a machine learning model will predict additional units needed to avoid a stock-out. These predictions are used in a policy for lateral transshipments. If a warehouse has excess inventory, it can initiate a lateral transshipment to a warehouse which faces stock-out. As a result of the rebalancing, distance to customers is likely to reduce, which facilitates fast delivery offered by the retailer.
+
+Limitations: cost, doest it make sense (only when customer in-stock value + contribution profit exceed transshipment cost).
 
 \end{abstract}
 

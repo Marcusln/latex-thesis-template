@@ -17,11 +17,27 @@
 \item Paterson review
 \end{itemize}
 
-Lateral transshipments are shipments between warehouses at the same echelon in the supply chain. It can be viewed as another form of inventory pooling, where warehouses of the same echelon share inventory since one warehouse can send a shipment that is needed in another warehouse. 
 
-By using transshipments, one can achieve the benefits of risk pooling without a central warehouse.
 
-Paterson (2011) categorizes lateral transshipments as either proactive or reactive. A proactive transfer, or preventive transfer, is a 
+Lateral transshipments are shipments between nodes of the same echelon in the supply chain. Typically, this means that a warehouse with excess inventory can re-supply another warehouse which requires additional inventory. Since a warehouse's excess inventory is leveraged to avoid lost sales or backorders due to stock-out, they are a mechanism to increase the service level. In effect, multiple inventory locations are consolidated, and the inventory pooling effect is achieved, which reduces costs by reducing the safety stock needed. By using transshipments, one can achieve the benefits of risk pooling without a central warehouse. 
+
+A key principle in forecasting is that forecasts are less accurate for longer time horizons (Reid, 2005@). Retailers places orders based on demand forecasts. From the retailer places the order until the demand is realized. The actual realized demand can be completely different than the forecasted demand at the time the retailer places the order. Due to these differences, it might happen that the inventory positions between the warehouses get imbalanced. A lateral transshipment can transfer stock to rebalance the network. 
+
+Similar to risk pooling => Since lateral transshipments leverage one warehouse's excess inventory to reduce another warehouse's shortfall, they are a mechanism to increase the service level.
+
+Increase service level or reduce cost, reduce inventory level.
+
+
+
+In a case where the order lead time is sufficiently large, a lateral transshipment can .. of get inventory without having to order. However, this is more costly as they are usually smaller and hence less scalable. Problem: How to scale lateral transshipments. Gather up transfer suggestions to fill up a full truck.
+
+In a comprehensive review, Paterson (2011@) classified literature by key characteristics related to inventory system, ordering and type of transshipment. A key characteristic is between proactive transshipments that occur at fixed points in time, and reactive transshipments that can occur at any time. Reactive transshipments are made in \textit{reaction} to realized demand, while proactive transshipments are made in anticipation of demand shortages. Costs.
+
+
+Reid R.D., Sanders N.R. - Operations Management An Integrated Approach.pdf
+
+
+
 
 Nice overview https://core.ac.uk/download/pdf/41829234.pdf:
 . Lateral Transshipments based on Availability (TBA) policy (Banerjee et al., 2003): in literature it is often named as Emergency Lateral Transshipment (ELT). In this case, at time t, it is checked if one or more warehouses are in stock shortage. 

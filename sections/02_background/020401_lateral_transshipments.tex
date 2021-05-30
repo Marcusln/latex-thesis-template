@@ -2,6 +2,32 @@
 \begin{document}
 % START SKRIV HER
 
+\newcommand{\headerline}[3]{%
+  \par\medskip\noindent
+  \makebox[0pt][l]{#1}%
+  \makebox[\textwidth][c]{#2}%
+  \makebox[0pt][r]{\texttt{#3}}\par\medskip}
+
+\iffalse
+\hspace*{\fill}
+{ILLUSTRATION 1} \hfill {ILLUSTRATION 2}
+\hspace*{\fill}
+\fi
+
+\iffalse
+\begin{enumerate}[a)]
+    \item \hfill$\begin{aligned}[t]
+        &h_i + p_j - c_{ij} - (c_i - c_j) \geq 0
+    \end{aligned}$\hfill\null
+    \item \hfill$\begin{aligned}[t]
+        &c_{ij} + (c_i - c_j) - (h_i - h_j) \geq 0
+    \end{aligned}$\hfill\null
+    \item \hfill$\begin{aligned}[t]
+        &c_{ij} + (c_i - c_j) - (p_i - p_j) \geq 0
+    \end{aligned}$\hfill\null
+\end{enumerate}
+\fi
+
 \section{Lateral Transshipments}
 
 \begin{itemize}
@@ -41,41 +67,42 @@ if benefit of shipping cost is greater than transfer cost
 
 Literature is usually about retailers sharing inventory with each other. 
 
-Tagaras (1989@) serves as an accessible illustration of a reactive transshipment policy. The considered supply chain consists of two retailers that are served by a single central warehouse and are allowed to transship to each other. Inventory levels are reviewed every period and each retailer follows a base-stock policy with base-stock \(S_i\). We observe the following costs:
+Tagaras (1989@) serves as an accessible illustration of a reactive transshipment policy. The considered supply chain consists of two retailers that are served by a single central warehouse and are allowed to transship to each other. Inventory levels are reviewed every period and each retailer follows a base-stock policy with base-stock \(S_i\). After demand $D_i$ is realized, transshipment decisions are made before demand is satisfied. We observe the following costs:
 %
 \begin{align*}
-    &c_i = \text{ordering cost per unit at retailer \(i\), for \(i\) = 1,2}\\
-    &h_i = \text{holding cost per unit per period at retailer \(i\), for \(i\) = 1,2}\\
-    &p_i = \text{penalty cost for shortage per unit per period at retailer \(i\), for \(i\) = 1,2}\\
-    &c_{ij} = \text{cost per unit to transship from \(i\) to \(j\), for \(i\) = 1,2, \(i\) \neq< \(j\).}
+    &c_i = \text{ordering cost per unit at retailer $i$}, && \text{for $i = 1,2$}  \\ 
+    &h_i = \text{holding cost per unit at retailer $i$}, && \text{for $i = 1,2$}  \\ 
+    &p_i = \text{penalty cost for stock-out per unit at retailer $i$}, && \text{for $i = 1,2$}  \\ 
+    &c_{ij} = \text{cost per unit to transship from $i$ to $j$}, && \text{$i,j = 1,2; i \neq j\,$.}
 \end{align*}
-
+%
 The assumption
 %
 \begin{equation}
-    c_i - c_j + c_{ij} \geq 0
+    c_i - c_j + c_{ij} \geq 0\label{eq:1}
 \end{equation}
 %
 ensures that it is cheaper to ship directly to \(j\) than to ship to \(i\) and immediately transship to \(j\). Additionally, we make the following assumptions: 
 %
-\begin{enumerate}[a)]
-%\begin{align*}
-\item \hfill$\begin{aligned}[t]
-&h_i + p_j - c_{ij} - (c_i - c_j) \geq 0
-\end{aligned}$\hfill\null
-\item \hfill$\begin{aligned}[t]
-&h_i + p_j - c_{ij} - (c_i - c_j) \geq 0
-\end{aligned}$\hfill\null
-%\end{align*}
-\end{enumerate}
+\begin{align}
+    h_i + p_j - c_{ij} - (c_i - c_j) &\geq 0\label{eq:2} \\
+    c_{ij} + (c_i - c_j) - (h_i - h_j) &\geq 0\label{eq:3} \\
+    c_{ij} + (c_i - c_j) - (p_i - p_j) &\geq 0\label{eq:4}\,.
+\end{align}
 %
-
-
-
-
-
-
-
+Assumption \eqref{eq:2} shows that a transshipment from retailer \(i\) to \(j\) is beneficial, since the cost of not doing a transshipment is $h_i + p_j + c_j - c_i$, which is less than the cost of the transshipment. Assumption \eqref{eq:3} and \eqref{eq:4} ensures that no transshipment is done if both retailers are over-stocked or under-stocked, respectively. Combined, the assumptions imply that a complete pooling policy is optimal: Transship $Y_{ij}$ from retailer $i$ to $j$, where $Y_{ij}$ is either the surplus stock of $i$, or only the part of the surplus stock that $j$ requires to satisfy demand. Formally, the complete pooling policy can be expressed as
+% 
+\begin{enumerate}[a)]
+    \item
+        \text{If $\forall_i ~ D_i \leq S_i$ \quad then $Y_{ij} = Y_{ji} = 0, \quad i,j = 1,2; j \neq i$}
+    \item
+        \text{If $\forall_i ~ D_i \geq S_i$ \quad then $Y_{ij} = Y_{ji} = 0, \quad i,j = 1,2; j \neq i$}
+    \item
+        \text{If $D_i < S_i$ \quad and $D_j > S_j,$ then}
+    \begin{align*}
+        \text{$Y_{ij} = \min\{S_i - D_i,D_j-S_j\}$ and $Y_{ji} = 0,\quad i,j = 1,2; j \neq i\,$.}
+    \end{align*}
+\end{enumerate}
 
 
 

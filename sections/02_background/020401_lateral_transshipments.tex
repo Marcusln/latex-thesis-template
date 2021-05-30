@@ -12,12 +12,12 @@
 \item but makes SC more flexible
 \item key characteristics table
 \item inventory pooling (complete, partial)
-\item Paterson review
-\item Paterson review
-\item Paterson review
 \end{itemize}
 
-
+\begin{enumerate}[a)]
+\item this is item a
+\item another item
+\end{enumerate}
 
 Lateral transshipments are shipments between nodes of the same echelon in the supply chain. Typically, this means that a warehouse with excess inventory can re-supply another warehouse which requires additional inventory. Since a warehouse's excess inventory is leveraged to avoid lost sales or backorders due to stock-out, they are a mechanism to increase the service level. In effect, multiple inventory locations are consolidated, and the inventory pooling effect is achieved, which reduces costs by reducing the safety stock needed. By using transshipments, one can achieve the benefits of risk pooling without a central warehouse. 
 
@@ -35,7 +35,53 @@ In a comprehensive review, Paterson (2011@) classified literature by key charact
 
 Complexity increases if ordering decisions are considered in the transshipment policy. Thus, they are either ignored completely or very restrictive assumptions are made (Paterson, 2011@). 
 
-Reference used in spare parts Mario Guajardo: http://www.din.uem.br/sbpo/sbpo2012/pdf/arq0346.pdf
+Since the policy proposed in this thesis ignores ordering, we omit these details from the literature review.
+
+if benefit of shipping cost is greater than transfer cost
+
+Literature is usually about retailers sharing inventory with each other. 
+
+Tagaras (1989@) serves as an accessible illustration of a reactive transshipment policy. The considered supply chain consists of two retailers that are served by a single central warehouse and are allowed to transship to each other. Inventory levels are reviewed every period and each retailer follows a base-stock policy with base-stock \(S_i\). We observe the following costs:
+%
+\begin{align*}
+    &c_i = \text{ordering cost per unit at retailer \(i\), for \(i\) = 1,2}\\
+    &h_i = \text{holding cost per unit per period at retailer \(i\), for \(i\) = 1,2}\\
+    &p_i = \text{penalty cost for shortage per unit per period at retailer \(i\), for \(i\) = 1,2}\\
+    &c_{ij} = \text{cost per unit to transship from \(i\) to \(j\), for \(i\) = 1,2, \(i\) \neq< \(j\).}
+\end{align*}
+
+The assumption
+%
+\begin{equation}
+    c_i - c_j + c_{ij} \geq 0
+\end{equation}
+%
+ensures that it is cheaper to ship directly to \(j\) than to ship to \(i\) and immediately transship to \(j\). Additionally, we make the following assumptions: 
+%
+\begin{enumerate}[a)]
+%\begin{align*}
+\item \hfill$\begin{aligned}[t]
+&h_i + p_j - c_{ij} - (c_i - c_j) \geq 0
+\end{aligned}$\hfill\null
+\item \hfill$\begin{aligned}[t]
+&h_i + p_j - c_{ij} - (c_i - c_j) \geq 0
+\end{aligned}$\hfill\null
+%\end{align*}
+\end{enumerate}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+Reference used in spare parts Mario Guajardo: %http://www.din.uem.br/sbpo/sbpo2012/pdf/arq0346.pdf
 
 
 Reid R.D., Sanders N.R. - Operations Management An Integrated Approach.pdf
@@ -48,6 +94,10 @@ Reid R.D., Sanders N.R. - Operations Management An Integrated Approach.pdf
 Nice overview https://core.ac.uk/download/pdf/41829234.pdf:
 . Lateral Transshipments based on Availability (TBA) policy (Banerjee et al., 2003): in literature it is often named as Emergency Lateral Transshipment (ELT). In this case, at time t, it is checked if one or more warehouses are in stock shortage. 
 
+Retailers share inventory, online grocery: https://www.sciencedirect.com/science/article/abs/pii/S0305054821000290?via%3Dihub
+
+Same as above:
+https://www.researchgate.net/publication/349066989_Lateral_Inventory_Share-based_Models_for_IoT-Enabled_E-Commerce_Sustainable_Food_Supply_Networks
 
 
 % SLUTT SKRIV HER

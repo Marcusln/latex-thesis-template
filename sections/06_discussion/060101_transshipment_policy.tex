@@ -11,6 +11,19 @@
 - How our model differs literature
 - Generalization, kan dette hjelpe andre bedrifter
 
+Assumptions:
+* Demand is evenly spread out so that if an additional in-stock warehouse always mean that the distance to the customers are reduced
+* If the online retailer does not have the item in-stock when a customer visits the website, the sale is lost
+* The supply chain is a single-echelon for simplicity, only the customer-facing echelon is relevant.
+* Assume ordering as exogenous, ie given and already optimized as much as possible. Ie we are trying to maximize the customer experience out of the inventory we already have in the network. Ie optimize inventory placement for delivery speed, ignoring all other costs/contribition. TA DETTE MED I INNLEDNING.
+=> this is a limitation since we will have a ordering system optimizing for one thing and transshipment policy for another, ie no global optimization
+* If there is a need for replenishment in the remaining period (next week), it will happen.
+
+* Limitations of the myopic approach
+* How the policy will interfer with ordering systems
+
+
+
 * Link to SLRP Lee et al. (2007)?
   * Combine proactive and reactive as mentioned in Paterson (2011), use SLRP from Lee (2007).
 
@@ -22,8 +35,10 @@
   * Fast: Optimize for recall
   * Slow: Optimize for precision
 
-\section{Transshipments in Online Retail}
+\section{Transshipments' importance in delivery speed in Online Retail}
 https://en.wikipedia.org/wiki/Kozmo.com
+
+\section{Value of the model}
 
 \section{Importance of IT}
 Sophisticated system that is aware of all inventory positions, and linked to the delivery promise offered on the website. If the system knows that inventory is sufficiently close to the customer

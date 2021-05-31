@@ -4,6 +4,17 @@
 
 \section{Benchmark Models}
 
+\subsection{Classification}
+* Predict same as last week
+* Predict the most common class
+* Logistic regression
+
+\subsection{Regression}
+* Predict same as last week
+* Supply chain heuristic using domain knowledge: forecast
+
+The use of multivariate models in this thesis is motivated by the complexity of the supply chain facing the case study company. In a simple supply chain, a good demand forecast would suffice to calculate the stockout quantity. To illustrate, this could be a single-echelon supply chain with a small number of warehouses, distinct products and suppliers. In that case, the supply chain is well-behaved using assumptions from literature. The stockout quantity in period $t_1$ would be the forecasted demand in $t_1$ minus the on-hand inventory in $t_0$. In our case, however, with a complex multi-echelon supply chain with many warehouses and suppliers, a complex ordering policy and lateral transshipments allowed, we hypothesize that multivariate models are more suitable as the aforementioned factors can be modelled. For this reason, linear regression is chosen as a benchmark, as opposed to a commonly used forecasting technique such as ARIMA. Testing this hypothesis would be interesting, but outside the scope of this thesis.
+
 Introduksjon til kapitlet.
 
 % SLUTT SKRIV HER

@@ -2,17 +2,17 @@
 \begin{document}
 % START SKRIV HER
 
-\section{Machine Learning Models}
+%https://scikit-learn.org/stable/auto_examples/calibration/plot_compare_calibration.html#sphx-glr-auto-examples-calibration-plot-compare-calibration-py
 
-https://scikit-learn.org/stable/auto_examples/calibration/plot_compare_calibration.html#sphx-glr-auto-examples-calibration-plot-compare-calibration-py
+\section{Extreme Gradient Boosting (XGBoost)}
+XGBoost is one of most commonly used machine learning algorithms, simply because it is known to perform well from Kaggle competitions, and because it's robust, has built-in feature selection and are not easily prone to overfitting. As such, it works well for most datasets and is likely to yield good results. It was developed by Cho et al. (2014) and is based on boosted decision trees. A decision tree is a rule-based algorithm that splits the predictor space into different regions, or leafs. In itself, they are usually not known for good accuracy. When they are combined as an ensemble, however, such as a random forest, multiple weak learner are combined. In general, ensemble models are known to have superior performance (James et al., 2013).
 
-\subsection{Classification}
-* Xgboost
 
-\subsection{Regression}
-* Xgboost
+In a regression problem, the ensemble estimates the target variable by taking the mean of the weak learners, whereas for classification the prediction is based on a majority vote.
 
 \subsection{Prediction-After-Classification}
+A clustering technique known as Prediction-After-Classification is used to improve accuracy of our model. It is commonly used in traffic simulation studies (citeme). The technique can improve predictions because we feed a machine learning model more observations that are similar yet slightly different, hence the machine learning model can learn the nuances of the variation in the data.  The rationale is that it is easier for the final regression model to perform well if it is not distorted by a high range of values. Perhaps more importantly than the value of the target variable itself, products that vary drastically in characteristics can come from totally different systems in the supply chain, such that we are asking the model to learn two differentn systems rather than one. 
+
 https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9319140
 https://arxiv.org/pdf/1301.2399.pdf
 https://www.sciencedirect.com/science/article/pii/S2192437620300066

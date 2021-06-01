@@ -66,10 +66,10 @@ The final was able to predict stockout one week in advance with an accuracy of 8
 The prediction-after-classification strategy improved performance by more than 4x. However, the range between RMSE and MAE is quite high, which indicates that the range in the output variable is also large, and illustrates how RMSE is punishing large errors more.
 
 \begin{itemize}
-\item Prediction-after-classification: RMSE: 4.56
-\item Prediction-after-classification: MAE: 0.59
-\item No classification: RMSE: 19.87
-\item No classification: MAE: 4.56
+\item Prediction-after-classification, XGBoost – RMSE: 4.56; MAE: 0.59
+\item No classification, XGBoost – RMSE: 19.87; MAE: 4.56
+\item No classification, linear regression w/feature selection – RMSE: 26.66; MAE: 8.91
+
 \end{itemize}
 
 Clustering works: http://www.jatit.org/volumes/Vol97No21/7Vol97No21.pdf

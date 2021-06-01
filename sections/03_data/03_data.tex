@@ -4,7 +4,19 @@
 
 \chapter{Data}
 
-The data comes from a large online retailer who operates in most of the largest countries in Europe, characterized by a complex supply chain with many warehouses. Furthermore, it is fortunate in the sense that data is amazing.
+The data was collected in cooperation with a large online retailer who operates in multiple countries in Europe, and is characterized by offering a huge selection of distinct products. The data is structured as a \textit{tidy} dataset, where each row is an observation and each column is a variable, which is optimal for modelling (Wickham, 2013). A random sample of 300,000 rows was fetched from the company's data warehouse using SQL. Since each row represents a product, random sampling is used to keep the number of distinct products sold per week confidential. Each column is a characteristic of the supply chain, such that each row gives the model a snapshot of the supply chain for a product at a specific week. In total, the dataset contains 192 columns, amongst others variables on sales, forecast, movements in the supply chain, product characteristics and ordering. Some feature engineering is performed, following techniques covered in (Kuhn & Johnson, 2020). Examples include the range, standard deviation, ratios, max, min and number of days between events. 
+
+The dataset covers seven weeks of sales, where the six first weeks are used for training and the final week is kept as the hold-out sample. This technique is used to evaluate the model on previously unseen data, which is a more accurate measure of real-life performance (James et al., 2013). The rationale for using the last week as the hold-out sample is because a product's inventory position in a week is a function of events in previous weeks, and we want to avoid data leakage, ie when information about the hold-out-set is leaked into the training data (Brownlee, 2020).
+
+For classification purposes, the dataset does suffer from class imbalance. Roughly 30\% of products are classified as going out-of-stock in the following week. However, this is not extreme class imbalance, and no techniques are used to balance the classes to reach ~50\% of rows in each class.
+
+* variables in literaeture used to predict OOS
+
+Wickham: https://www.jstatsoft.org/article/view/v059i10
+
+https://machinelearningmastery.com/data-leakage-machine-learning/
+
+https://www.routledge.com/Feature-Engineering-and-Selection-A-Practical-Approach-for-Predictive-Models/Kuhn-Johnson/p/book/9781032090856
 
 % SLUTT SKRIV HER
 \end{document}

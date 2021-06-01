@@ -4,12 +4,75 @@
 
 \section{Model Performance Results}
 
-\subsection{Benchmark Models}
-\subsection{Machine Learning Models}
-\subsubsection{Classification}
-\subsubsection{Regression}
+\subsection{Classification}
 
-Introduksjon til kapitlet.
+The final was able to predict stockout one week in advance with an accuracy of 87.86\%. When it was predicting a stockout, it was correct in 86\% of the cases. For all the cases where it was predicting a stockout, 78\% of the predictions were correct. This indicates that there is sufficient signal in the training data to be able to predict a stockout. Finally, the ROC curve shows that the good scores are not due to the class imbalance, the model is actually bringing value.
+
+\begin{itemize}
+\item Accuracy: 87\%
+\item Precision: 86\%
+\item Recall: 78\%
+\item ROC AUC: 0.953
+\end{itemize}
+
+\documentclass[11pt]{report}
+\usepackage{graphicx}
+
+%%%% Confusion Matrix Body %%%%
+\newcommand\MyBox[1]{%
+  \fbox{\parbox[c][1.7cm][c]{1.7cm}{\centering #1}}%
+  % Size of boxes
+}
+\newcommand\MyVBox[1]{%
+  \parbox[c][1cm][c]{1cm}{\centering\bfseries #1}%
+}  
+\newcommand\MyHBox[2][\dimexpr1.7cm+2\fboxsep\relax]{%
+  \parbox[c][1cm][c]{#1}{\centering\bfseries #2}%
+}  
+\newcommand\MyTBox[4]{%
+  \MyVBox{#1}
+  \MyBox{#2}\hspace*{-\fboxrule}%
+  \MyBox{#3}\par\vspace{-\fboxrule}%
+}  
+%%%%
+\newcommand*\rot{\rotatebox{90}}
+
+\begin{document}
+\begin{figure}
+\begin{center}
+{
+\offinterlineskip
+
+\raisebox{-5cm}[0pt][0pt]{
+\parbox[c][0pt][c]{0cm}{\hspace{-3.5cm}\rot{\textbf{Actual OOS}}\\[20pt]}}\par
+
+\hspace*{1cm}\MyHBox[\dimexpr3.4cm+6\fboxsep\relax]{Predicted OOS}\par
+
+\hspace*{1cm}\MyHBox{No}\MyHBox{Yes}\par
+
+\MyTBox{No}{19174}{1392}
+\MyTBox{Yes}{2424}{8446}
+}
+\end{center}
+\end{figure}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsubsection{Thresholds}
+%https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/
+
+\subsection{Regression}
+The prediction-after-classification strategy improved performance by more than 4x. However, the range between RMSE and MAE is quite high, which indicates that the range in the output variable is also large, and illustrates how RMSE is punishing large errors more.
+
+\begin{itemize}
+\item Prediction-after-classification: RMSE: 4.56
+\item Prediction-after-classification: MAE: 0.59
+\item No classification: RMSE: 19.87
+\item No classification: MAE: 4.56
+\end{itemize}
+
+Clustering works: http://www.jatit.org/volumes/Vol97No21/7Vol97No21.pdf
 
 % SLUTT SKRIV HER
 \end{document}

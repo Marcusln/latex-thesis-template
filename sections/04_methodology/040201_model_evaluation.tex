@@ -10,10 +10,61 @@
 
 \subsection{Classification}
 * Accuracy
-* Kappa's accuracy (imbalanced)
 * ROC
 * Area under the precision-recall curve
 
+
+
+%%%%%%
+
+\documentclass[11pt]{report}
+\usepackage{graphicx}
+
+%%%% Confusion Matrix Body %%%%
+\newcommand\MyBox[1]{%
+  \fbox{\parbox[c][1.7cm][c]{1.7cm}{\centering #1}}%
+  % Size of boxes
+}
+\newcommand\MyVBox[1]{%
+  \parbox[c][1cm][c]{1cm}{\centering\bfseries #1}%
+}  
+\newcommand\MyHBox[2][\dimexpr1.7cm+2\fboxsep\relax]{%
+  \parbox[c][1cm][c]{#1}{\centering\bfseries #2}%
+}  
+\newcommand\MyTBox[4]{%
+  \MyVBox{#1}
+  \MyBox{#2}\hspace*{-\fboxrule}%
+  \MyBox{#3}\par\vspace{-\fboxrule}%
+}  
+%%%%
+\newcommand*\rot{\rotatebox{90}}
+
+\begin{document}
+
+
+\begin{figure}
+\begin{center}
+{
+
+\offinterlineskip
+
+\raisebox{-5cm}[0pt][0pt]{
+\parbox[c][0pt][c]{0cm}{\hspace{-3.5cm}\rot{\textbf{Actual}}\\[20pt]}}\par
+
+\hspace*{1cm}\MyHBox[\dimexpr3.4cm+6\fboxsep\relax]{Predicted}\par
+
+\hspace*{1cm}\MyHBox{30}\MyHBox{90}\par
+
+\MyTBox{30}{9418}{1471}
+
+\MyTBox{90}{144}{317}
+
+}
+\end{center}
+\end{figure}
+\end{document}
+
+%%%%%%
 \subsubsection{Thresholds}
 https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/
 
